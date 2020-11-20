@@ -1,0 +1,33 @@
+version: "3.7"
+
+services:
+  v1-web:
+    command: pipenv run python3 manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ${DEV_V1_DIR}/hyperqube:/app/hyperqube
+    environment:
+      DATABASE_URL: ${DEV_V1_DATABASE_URL}
+  v1-worker:
+    command: pipenv run python3 manage.py rqworker default deep_clone linked_clone
+    volumes:
+      - ${DEV_V1_DIR}/hyperqube:/app/hyperqube
+    environment:
+      DATABASE_URL: ${DEV_V1_DATABASE_URL}
+  v2-api:
+    build:
+      context: ${DEV_V2_API_DIR}
+      dockerfile: ./docker/dev.Dockerfile
+    image: "ghcr.io/hyperqube-io/v2-api:local"
+    volumes:
+      - ${DEV_V2_API_DIR}/src:/src
+    environment:
+      DATABASE_URL: ${DEV_V2_DATABASE_URL}
+      V1_DATABASE_URL: ${DEV_V1_DATABASE_URL}
+  v2-web:
+    build:
+      context: ${DEV_V2_WEB_DIR}
+      dockerfile: ./docker/dev.Dockerfile
+    image: "ghcr.io/hyperqube-io/v2-web:local"
+    stdin_open: true
+    volumes:
+      - ${DEV_V2_WEB_DIR}/src:/src

@@ -1,0 +1,120 @@
+version: "3.7"
+
+x-common:
+  &hq-common
+  restart: ${DOCKER_RESTART_POLICY:-always}
+  networks:
+    - hq
+
+services:
+  s3:
+    <<: *hq-common
+    container_name: hq-s3
+    image: minio/minio:latest
+    command: server /data
+    environment:
+      MINIO_ACCESS_KEY: ${AWS_ACCESS_KEY_ID}
+      MINIO_SECRET_KEY: ${AWS_SECRET_ACCESS_KEY}
+    volumes:
+      - s3:/data
+  v1-db:
+    <<: *hq-common
+    container_name: hq-v1-db
+    image: postgres:11.6-alpine
+    environment:
+      POSTGRES_PASSWORD: ${V1_DB_PASSWORD}
+    volumes:
+      - v1-db:/var/lib/postgresql/data
+  v2-db:
+    <<: *hq-common
+    container_name: hq-v2-db
+    image: postgres:12.4-alpine
+    environment:
+      POSTGRES_PASSWORD: ${V2_DB_PASSWORD}
+    volumes:
+      - v2-db:/var/lib/postgresql/data
+  v1-redis:
+    <<: *hq-common
+    container_name: hq-v1-redis
+    image: redis:5.0.6-alpine
+  v1-web:
+    <<: *hq-common
+    container_name: hq-v1-web
+    image: ghcr.io/hyperqube-io/v1-web:${HQ_VERSION}
+    depends_on:
+      - v1-db
+      - v1-redis
+    environment:
+      APP_URL: ${APP_URL}
+      DATABASE_URL: postgres://postgres:${V1_DB_PASSWORD}@v1-db/postgres
+      DEBUG: "true"
+      ENCRYPT_KEY: ${V1_ENCRYPTION_KEY}
+      LICENSE_SERVICE_URL: https://license.${HQ_VERSION}.service.hyperqube.io
+      REDIS_HOST: v1-redis
+      SECRET_KEY: ${V1_SECRET_KEY}
+      SENTRY_DSN: https://92976028678c4a749a2e131a13ee5145@o467308.ingest.sentry.io/5493526
+      USE_SQLITE: "False"
+      V2_URL: ${APP_URL}/v2
+  v1-worker:
+    <<: *hq-common
+    container_name: hq-v1-worker
+    image: ghcr.io/hyperqube-io/v1-worker:${HQ_VERSION}
+    depends_on:
+      - v1-db
+      - v1-redis
+    environment:
+      APP_URL: ${APP_URL}
+      DATABASE_URL: postgres://postgres:${V1_DB_PASSWORD}@v1-db/postgres
+      ENCRYPT_KEY: ${V1_ENCRYPTION_KEY}
+      REDIS_HOST: v1-redis
+      SECRET_KEY: ${V1_SECRET_KEY}
+  v2-api:
+    <<: *hq-common
+    container_name: hq-v2-api
+    image: ghcr.io/hyperqube-io/v2-api:${HQ_VERSION}
+    depends_on:
+      - v1-db
+      - v2-db
+    environment:
+      AWS_S3_ENDPOINT: ${AWS_S3_ENDPOINT:-http://s3:9000}
+      AWS_S3_IMAGE_BUCKET: ${AWS_S3_IMAGE_BUCKET}
+      DATABASE_URL: postgres://postgres:${V2_DB_PASSWORD}@v2-db/postgres
+      HTTP_PORT: 80
+      JWT_KEY: ${V2_SECRET_KEY}
+      NODE_ENV: ${V2_NODE_ENV:-production}
+      SENTRY_DSN: https://c42942d8618e4fc19c10842e39026bca@o467308.ingest.sentry.io/5499286
+      V1_DATABASE_URL: postgres://postgres:${V1_DB_PASSWORD}@v1-db/postgres
+      V1_ENCRYPTION_KEY: ${V1_ENCRYPTION_KEY}
+      V1_URL: http://v1-web:8000
+  v2-web:
+    <<: *hq-common
+    container_name: hq-v2-web
+    image: ghcr.io/hyperqube-io/v2-web:${HQ_VERSION}
+    environment:
+      PUBLIC_URL: ${APP_URL}/v2/
+      REACT_APP_API_URL_V1: ${APP_URL}
+      REACT_APP_API_URL_V2: ${APP_URL}/v2/api
+      REACT_APP_BASE_URL: /v2/
+  nginx:
+    <<: *hq-common
+    container_name: hq-nginx
+    image: nginx:1.19-alpine
+    depends_on:
+      - v1-web
+      - v2-api
+      - v2-web
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d
+      - ./nginx/certs:/etc/nginx/certs
+
+networks:
+  hq:
+    name: hq
+
+volumes:
+  s3:
+  v2-db:
+  v1-db:
