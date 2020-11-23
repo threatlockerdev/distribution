@@ -23,10 +23,8 @@ source .env
 
 COMMAND="$1"
 
-if [ "$COMMAND" == "db:v1" ]; then
-  docker-compose exec v1-db psql -U postgres
-elif [ "$COMMAND" == "db:v2" ]; then
-  docker-compose exec v2-db psql -U postgres
+if [ -f "./commands/$1.sh" ]; then
+  bash "./commands/$1.sh" $2 $3 $4 $5
 else
-  pipenv run python3 ./scripts/manage.py $*
+  docker-compose $*
 fi
