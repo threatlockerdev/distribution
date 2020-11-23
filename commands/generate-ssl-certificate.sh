@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
 
+APP_HOST=$(echo "$APP_URL" | awk -F/ '{print $3}')
 DAYS=${1:-1024}
 
 PUBLIC_KEY="./nginx/certs/main.pub"
