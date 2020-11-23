@@ -21,4 +21,4 @@ openssl req -x509 -nodes -newkey rsa:4096 \
   -out "$PUBLIC_KEY" \
   -subj "/C=US/ST=DC/L=DC/O=Hyperqube/OU=Deployment/CN=$APP_HOST"
 
-echo "Self-signed certificate created. Please run `./manage restart nginx` to apply it."
+echo "Self-signed certificate created. Please run \`./manage restart nginx\` to apply it."
