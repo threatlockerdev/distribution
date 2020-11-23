@@ -2,18 +2,6 @@
 
 set -e
 
-if ! command -v "pip3" &> /dev/null; then
-  echo "Requesting installation of pip3..."
-  apt-get install python3-pip
-fi
-
-if ! command -v "pipenv" &> /dev/null; then
-  echo "Installing pipenv..."
-  pip3 install pipenv
-fi
-
-pipenv install &> /dev/null
-
 if [ ! -f .env ]; then
   cp .env.defaults .env
   echo "Please edit the .env file I just copied from .env.defaults!"
