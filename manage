@@ -7,7 +7,9 @@ if [ ! -f .env ]; then
   echo "Please edit the .env file I just copied from .env.defaults!"
   exit 1
 fi
-source .env
+set -a
+source .env >/dev/null 2>&1
+set +a
 
 COMMAND="$1"
 
