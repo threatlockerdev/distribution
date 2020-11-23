@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 echo "Usage: ./manage <command> [args]
 Commands:

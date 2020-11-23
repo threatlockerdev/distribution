@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 DAYS=${$1:-1024}
 

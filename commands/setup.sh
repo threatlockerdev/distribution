@@ -1,6 +1,7 @@
 #!/bin/bash
+set -e
 
-source ./commands/run-migrations.sh
+bash ./commands/run-migrations.sh
 
 docker-compose up -d
 

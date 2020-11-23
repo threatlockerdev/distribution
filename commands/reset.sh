@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 if [ "$1" != "-y" ]; then
   echo "WARNING: This will completely erase your installation."
