@@ -4,6 +4,7 @@
 
 - Machine or VM running a recent version of Ubuntu or Debian,
   - with [Docker](https://docs.docker.com/engine/install/ubuntu/) installed
+  - with [Docker Compose](https://docs.docker.com/compose/install/) installed
   - with [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) installed
 
 ## Steps
