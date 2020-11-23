@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-DAYS=${$1:-1024}
+DAYS=${1:-1024}
 
 PUBLIC_KEY="./nginx/certs/main.pub"
 PRIVATE_KEY="./nginx/certs/main.key"
