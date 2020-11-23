@@ -9,7 +9,17 @@ if [ ! -f .env ]; then
 fi
 set -a
 source .env >/dev/null 2>&1
+V1_DATABASE_URL="$V1_DATABASE_URL"
+if [ "$V1_DATABASE_URL" == "" ]; then
+  V1_DATABASE_URL="postgres://postgres:$V1_DB_PASSWORD@v1-db/postgres"
+fi
+V2_DATABASE_URL="$V2_DATABASE_URL"
+if [ "$V2_DATABASE_URL" == "" ]; then
+  V2_DATABASE_URL="postgres://postgres:$V2_DB_PASSWORD@v2-db/postgres"
+fi
 set +a
+
+echo "V2: $V2_DATABASE_URL"
 
 COMMAND="$1"
 
