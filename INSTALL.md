@@ -14,4 +14,9 @@
 3. Edit the `.env` file, follow its instructions
 4. Run `docker login -u hyperqubebot ghcr.io`, using a personal access token with `read:packages` permission only.
 5. Run `./manage setup` again
-6. Run `./manage start`
+6. Set up SSL certificates:
+   - If you want to use your own certificates (recommended), place them in:
+     - Private key: `./nginx/certs/main.key`
+     - Public key: `./nginx/certs/main.pub`
+   - Or, use self-signed certificates: `./manage generate-ssl-certificate`
+7. Run `./manage start`
