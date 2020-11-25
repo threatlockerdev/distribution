@@ -9,7 +9,7 @@
 
 ## Steps
 
-1. Clone this repo: `https://github.com/hyperqube-io/distribution.git hq-dist`
+1. Clone this repo: `git clone https://github.com/hyperqube-io/distribution.git hq-dist`
 2. Change directory and initialize a .env file: `cd hq-dist && ./manage setup`
 3. Edit the `.env` file, follow its instructions
 4. Run `docker login -u hyperqubebot ghcr.io`, using a personal access token with `read:packages` permission only.
