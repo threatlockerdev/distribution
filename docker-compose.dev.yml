@@ -17,10 +17,8 @@ services:
     volumes:
       - ${DEV_V2_API_DIR}/src:/src
   v2-web:
-    build:
-      context: ${DEV_V2_WEB_DIR}
-      dockerfile: ./docker/dev.Dockerfile
-    image: "ghcr.io/hyperqube-io/v2-web:local"
-    stdin_open: true
+    image: alpine:latest
+    command: tail -f /dev/null
+  nginx:
     volumes:
-      - ${DEV_V2_WEB_DIR}/src:/src
+      - ./nginx/dev.conf:/etc/nginx/conf.d/default.conf
