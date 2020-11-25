@@ -12,7 +12,7 @@
 1. Clone this repo: `git clone https://github.com/hyperqube-io/distribution.git hq-dist`
 2. Change directory and initialize a .env file: `cd hq-dist && ./manage setup`
 3. Edit the `.env` file, follow its instructions
-4. Run `docker login -u hyperqubebot ghcr.io`, using a personal access token with `read:packages` permission only.
+4. Run `docker login -u hyperqubebot ghcr.io`, using a personal access token with `read:packages` permission only. Personal access tokens can be generated here `https://github.com/settings/tokens`
 5. Run `./manage setup` again
 6. Set up SSL certificates:
    - If you want to use your own certificates (recommended), place them in:
