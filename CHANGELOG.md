@@ -4,6 +4,10 @@ This changelog is for versions of our entire platform. Individual services in th
 
 We use [semver](https://semver.org/) for versioning.
 
+## v1.1.2
+
+- Fixed some buggy license-checking logic that was causing login issues [ch-148](https://app.clubhouse.io/hyperqube/story/148/bug-licenses-are-not-being-detected)
+
 ## v1.1.1
 
 - Fixed an overflow bug in v1 design list page [ch-142](https://app.clubhouse.io/hyperqube/story/142/design-cards-overflow-horizontally-without-scrollbar)
