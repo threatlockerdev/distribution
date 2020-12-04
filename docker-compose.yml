@@ -49,6 +49,7 @@ services:
       DATABASE_URL: ${V1_DATABASE_URL}
       DEBUG: "true"
       ENCRYPT_KEY: ${V1_ENCRYPTION_KEY}
+      HQ_VERSION: ${HQ_VERSION}
       LICENSE_SERVICE_URL: https://license.${HQ_VERSION}.service.hyperqube.io
       REDIS_HOST: v1-redis
       SECRET_KEY: ${V1_SECRET_KEY}
@@ -66,6 +67,7 @@ services:
       APP_URL: ${APP_URL}
       DATABASE_URL: ${V1_DATABASE_URL}
       ENCRYPT_KEY: ${V1_ENCRYPTION_KEY}
+      HQ_VERSION: ${HQ_VERSION}
       REDIS_HOST: v1-redis
       SECRET_KEY: ${V1_SECRET_KEY}
   v2-api:
@@ -80,6 +82,7 @@ services:
       AWS_S3_IMAGE_BUCKET: ${AWS_S3_IMAGE_BUCKET}
       DATABASE_URL: ${V2_DATABASE_URL}
       HTTP_PORT: 80
+      HQ_VERSION: ${HQ_VERSION}
       JWT_KEY: ${V2_SECRET_KEY}
       NODE_ENV: ${V2_NODE_ENV:-production}
       SENTRY_DSN: https://c42942d8618e4fc19c10842e39026bca@o467308.ingest.sentry.io/5499286
@@ -95,6 +98,7 @@ services:
       REACT_APP_API_URL_V1: ${APP_URL}
       REACT_APP_API_URL_V2: ${APP_URL}/v2/api
       REACT_APP_BASE_URL: /v2/
+      REACT_APP_HQ_VERSION: ${HQ_VERSION}
   nginx:
     <<: *hq-common
     container_name: hq-nginx
