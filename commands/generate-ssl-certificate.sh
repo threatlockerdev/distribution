@@ -17,8 +17,8 @@ docker run --rm -it \
   frapsoft/openssl req \
     -x509 -nodes -newkey rsa:4096 \
     -days "$DAYS" \
-    -keyout "/certs/main.pub" \
-    -out "/certs/main.key" \
+    -keyout "/certs/main.key" \
+    -out "/certs/main.pub" \
     -subj "/C=US/ST=DC/L=DC/O=Hyperqube/OU=Deployment/CN=$APP_HOST"
 
 echo "Self-signed certificate created. Please run \`./manage restart nginx\` to apply it."
