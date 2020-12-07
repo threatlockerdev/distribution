@@ -3,6 +3,7 @@
 __pycache__
 *.pyc
 
-nginx/certs
+nginx/certs/*.key
+nginx/certs/*.pub
 
 .env
