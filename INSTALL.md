@@ -14,10 +14,13 @@
 3. Edit the `.env` file, follow its instructions
 4. Run `docker login -u <your username> ghcr.io`, using a personal access token with `read:packages` permission only. If you're doing this for a client, you probably want to use the username `hyperqubebot`.
    - To create a PAT, go to [Github's developer settings](https://github.com/settings/tokens).
-5. Run `./manage setup` again
-6. Set up SSL certificates:
+5. Set up SSL certificates:
    - If you want to use your own certificates (recommended), place them in:
      - Private key: `./nginx/certs/main.key`
      - Public key: `./nginx/certs/main.pub`
    - Or, use self-signed certificates: `./manage generate-ssl-certificate`
-7. Run `./manage start`
+6. If you're setting up in a production environment:
+   - Run `./manage setup`
+   - Run `./manage start`
+7. If you're setting up in a dev environment:
+   - Run `./manage setup-dev`
