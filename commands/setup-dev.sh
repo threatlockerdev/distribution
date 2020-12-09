@@ -8,10 +8,12 @@ function set_dotenv() {
 }
 
 echo "Cloning repositories..."
-
-git clone git@github.com:hyperqube-io/v2-api ../v2-api
-git clone git@github.com:hyperqube-io/v2-web ../v2-web
-git clone git@github.com:hyperqube-io/website ../website
+repos=(v2-api v2-web website)
+for repo in ${repos[@]}; do
+  if [ ! -d "../$repo" ]; then
+    git clone "git@github.com:hyperqube-io/$repo" "../$repo"
+  fi
+done
 
 if [ ! -f ".env" ]; then
   cp .env.defaults .env
