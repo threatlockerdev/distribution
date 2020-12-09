@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e
 
-echo "Stopping all services..."
-docker-compose down
+echo "Stopping service(s)..."
+docker-compose down $*
 
-echo "Starting all services..."
-docker-compose up
+echo "Starting service(s)..."
+docker-compose up $*
