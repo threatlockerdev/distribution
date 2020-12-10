@@ -4,6 +4,11 @@ This changelog is for versions of our entire platform. Individual services in th
 
 We use [semver](https://semver.org/) for versioning.
 
+## v1.1.4
+
+- Reimplemented new license logic in beta [ch-152](https://app.clubhouse.io/hyperqube/story/152/reimplement-fix-license-logic)
+- Hid v2 sidebar links in production [ch-174](https://app.clubhouse.io/hyperqube/story/174/view-resource-usage-needs-to-be-removed-from-production)
+
 ## v1.1.3
 
 - Fixed tenancy management page when no license exists [ch-158](https://app.clubhouse.io/hyperqube/story/158/tenancy-management-page-doesn-t-load-when-no-license-exists)
