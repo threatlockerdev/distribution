@@ -5,10 +5,12 @@ services:
     command: pipenv run python3 manage.py runserver 0.0.0.0:8000
     volumes:
       - ${DEV_V1_DIR}/hyperqube:/app/hyperqube
+      - ${DEV_V1_DIR}/scripts:/app/scripts
   v1-worker:
-    command: pipenv run python3 manage.py rqworker default deep_clone linked_clone
+    command: python3 ./scripts/workers.py
     volumes:
       - ${DEV_V1_DIR}/hyperqube:/app/hyperqube
+      - ${DEV_V1_DIR}/scripts:/app/scripts
   v2-api:
     build:
       context: ${DEV_V2_API_DIR}

@@ -70,6 +70,9 @@ services:
       HQ_VERSION: ${HQ_VERSION}
       REDIS_HOST: v1-redis
       SECRET_KEY: ${V1_SECRET_KEY}
+      WORKERS_DC: ${V1_WORKERS_DC}
+      WORKERS_LC: ${V1_WORKERS_LC}
+      WORKERS_DEFAULT: ${V1_WORKERS_DEFAULT}
   v2-api:
     <<: *hq-common
     container_name: hq-v2-api
