@@ -18,6 +18,10 @@ if [ "$local_sha" != "$remote_sha" ] && [ "$local_sha" = "$base_sha" ]; then
   git pull
   echo "Please make sure to check that your .env is still up-to-date,"
   echo "  by examining .env.example for any changes."
+
+  echo "Re-running update..."
+  bash ./commands/update.sh
+  exit 0
 fi
 
 echo "Updating all services..."
