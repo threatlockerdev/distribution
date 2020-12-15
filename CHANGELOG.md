@@ -4,6 +4,12 @@ This changelog is for versions of our entire platform. Individual services in th
 
 We use [semver](https://semver.org/) for versioning.
 
+## v1.1.5
+
+- Added environment variables to set v1-worker count
+- Improved parallel deployment logic [ch-179](https://app.clubhouse.io/hyperqube/story/179)
+- Improved v2 UI/UX
+
 ## v1.1.4
 
 - Reimplemented new license logic in beta [ch-152](https://app.clubhouse.io/hyperqube/story/152/reimplement-fix-license-logic)
