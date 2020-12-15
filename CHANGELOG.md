@@ -4,6 +4,10 @@ This changelog is for versions of our entire platform. Individual services in th
 
 We use [semver](https://semver.org/) for versioning.
 
+## v1.1.6
+
+- Added environment variable for worker queue handling (`V1_WORKERS_TYPE`) [ch-186](https://app.clubhouse.io/hyperqube/story/186/v1-add-setting-to-have-each-worker-handle-one-queue)
+
 ## v1.1.5
 
 - Added environment variables to set v1-worker count
