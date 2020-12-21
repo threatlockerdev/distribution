@@ -3,6 +3,8 @@ version: "3.7"
 services:
   v1-web:
     command: pipenv run python3 manage.py runserver 0.0.0.0:8000
+    environment:
+      LICENSE_SERVICE_URL: https://license.beta.service.hyperqube.io
     volumes:
       - ${DEV_V1_DIR}/hyperqube:/app/hyperqube
       - ${DEV_V1_DIR}/scripts:/app/scripts
