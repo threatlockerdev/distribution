@@ -4,6 +4,17 @@ This changelog is for versions of our entire platform. Individual services in th
 
 We use [semver](https://semver.org/) for versioning.
 
+## v1.1.7
+
+- Design names can now be changed [ch-188](https://app.clubhouse.io/hyperqube/story/188/v1-allow-user-to-change-design-name)
+
+The following changes only affect the v2 beta:
+
+- Redesigned the Designs page to better display different design types [ch-180](https://app.clubhouse.io/hyperqube/story/180/v2-show-all-design-types-on-designs-all), [ch-199](https://app.clubhouse.io/hyperqube/story/199/v2-remove-design-filter-pages)
+- Clicking outside of design card headers now cancels editing the design name [ch-183](https://app.clubhouse.io/hyperqube/story/183/v2-clicking-outside-the-design-card-header-should-cancel-editing)
+- Delete confirmation dialogs now close after confirmation [ch-196](https://app.clubhouse.io/hyperqube/story/196/v2-design-delete-confirmation-dialog-remains-visible-after-confirming)
+- Cancelling a design deletion now unlocks the design card [ch-191](https://app.clubhouse.io/hyperqube/story/191/v2-cancelling-a-design-deletion-doesn-t-unlock-the-card)
+
 ## v1.1.6
 
 - Added environment variable for worker queue handling (`V1_WORKERS_TYPE`) [ch-186](https://app.clubhouse.io/hyperqube/story/186/v1-add-setting-to-have-each-worker-handle-one-queue)
