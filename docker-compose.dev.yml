@@ -19,6 +19,8 @@ services:
       dockerfile: ./docker/dev.Dockerfile
     image: "ghcr.io/hyperqube-io/v2-api:local"
     volumes:
+      - ${DEV_V2_API_DIR}/package.json:/package.json
+      - ${DEV_V2_API_DIR}/yarn.lock:/yarn.lock
       - ${DEV_V2_API_DIR}/src:/src
   v2-web:
     image: alpine:latest
