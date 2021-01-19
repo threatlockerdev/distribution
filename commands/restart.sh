@@ -1,8 +1,6 @@
 #!/bin/bash
 set -e
 
-echo "Stopping service(s)..."
-docker-compose down $*
+bash commands/stop.sh
 
-echo "Starting service(s)..."
-docker-compose up $*
+bash commands/start.sh
