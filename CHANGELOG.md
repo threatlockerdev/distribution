@@ -4,6 +4,18 @@ This changelog is for versions of our entire platform. Individual services in th
 
 We use [semver](https://semver.org/) for versioning.
 
+## v1.1.8
+
+Released 2021-01-19
+
+- The user creation modal now resets correctly when an error occurs. [ch-140](https://app.clubhouse.io/hyperqube/story/140)
+
+The following changes only affect the v2 beta:
+
+- Fixed design card refreshing on change [ch-197](https://app.clubhouse.io/hyperqube/story/197/v2-deleted-design-cards-are-not-automatically-removed)
+- Implemented WYSIWIG editor for design descriptions [ch-185](https://app.clubhouse.io/hyperqube/story/185/v2-edit-design-descriptions-with-wysiwig-html)
+- Improved styling of designs list [ch-192](https://app.clubhouse.io/hyperqube/story/192/v2-design-card-s-edit-description-button-should-have-larger-hover-background)
+
 ## v1.1.7
 
 Released 2021-01-12
