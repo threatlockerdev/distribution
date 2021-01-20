@@ -4,6 +4,12 @@ This changelog is for versions of our entire platform. Individual services in th
 
 We use [semver](https://semver.org/) for versioning.
 
+## v1.1.9
+
+Released 2021-01-20 (hotfix)
+
+- Fixed changing design name [ch-249](https://app.clubhouse.io/hyperqube/story/249/changing-design-name-throws-an-error)
+
 ## v1.1.8
 
 Released 2021-01-19
