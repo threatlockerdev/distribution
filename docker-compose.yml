@@ -13,8 +13,8 @@ services:
     image: minio/minio:latest
     command: server /data
     environment:
-      MINIO_ACCESS_KEY: ${AWS_ACCESS_KEY_ID}
-      MINIO_SECRET_KEY: ${AWS_SECRET_ACCESS_KEY}
+      MINIO_ROOT_USER: ${AWS_ACCESS_KEY_ID}
+      MINIO_ROOT_PASSWORD: ${AWS_SECRET_ACCESS_KEY}
     volumes:
       - s3:/data
   v1-db:
@@ -82,7 +82,10 @@ services:
       - v1-db
       - v2-db
     environment:
-      AWS_S3_ENDPOINT: ${AWS_S3_ENDPOINT:-http://s3:9000}
+      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
+      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+      AWS_S3_ENDPOINT: ${AWS_S3_ENDPOINT}
+      AWS_S3_PUBLIC_ENDPOINT: ${AWS_S3_PUBLIC_ENDPOINT}
       AWS_S3_IMAGE_BUCKET: ${AWS_S3_IMAGE_BUCKET}
       DATABASE_URL: ${V2_DATABASE_URL}
       HTTP_PORT: 80
