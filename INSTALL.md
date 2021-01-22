@@ -7,6 +7,10 @@
   - with [Docker Compose](https://docs.docker.com/compose/install/) installed
   - with [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) installed
 
+If you're using a dev machine, you'll also need:
+
+- [Node.JS v14](https://nodejs.org/en/download/)
+
 ## Steps
 
 1. Clone this repo: `git clone https://github.com/hyperqube-io/distribution.git hq-dist`
