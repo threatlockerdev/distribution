@@ -4,6 +4,20 @@ This changelog is for versions of our entire platform. Individual services in th
 
 We use [semver](https://semver.org/) for versioning.
 
+## v1.1.10
+
+Released 2021-02-02
+
+All changes in this release are for the v2 beta.
+
+- Implemented version endpoints in v1 [ch-216](https://app.clubhouse.io/hyperqube/story/216/v1-implement-product-version-endpoint) and v2 [ch-212](https://app.clubhouse.io/hyperqube/story/212/v2-implement-product-version-endpoint)
+- Users can now upload OVAs in addition to ISOs [ch-209](https://app.clubhouse.io/hyperqube/story/209)
+- Fixed design card accordions at small widths [ch-205](https://app.clubhouse.io/hyperqube/story/205/v2-design-card-pops-outside-of-accordion-under-certain-page-widths)
+- Sidebar is hidden when only one link would be visible [ch-203](https://app.clubhouse.io/hyperqube/story/203/v2-hide-sidebar-when-only-one-link-would-be-visible)
+- Tokens are now signed more securely [ch-244](https://app.clubhouse.io/hyperqube/story/244/v2-add-signer-metadata-to-jwts)
+- Fixed direct login [ch-245](https://app.clubhouse.io/hyperqube/story/245/v2-logging-in-directly-throws-an-error)
+- Stopped caching tenancy connections [ch-250](https://app.clubhouse.io/hyperqube/story/250/v2-vsphere-connections-lose-auth-randomly)
+
 ## v1.1.9
 
 Released 2021-01-20 (hotfix)
