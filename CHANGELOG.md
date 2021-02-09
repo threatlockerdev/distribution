@@ -4,6 +4,20 @@ This changelog is for versions of our entire platform. Individual services in th
 
 We use [semver](https://semver.org/) for versioning.
 
+## v1.1.11
+
+Released 2021-02-09
+
+- New machines / networks now appear in the top-left of canvas (was top-right) [ch-57](https://app.clubhouse.io/hyperqube/story/57)
+
+The following changes only affect the v2 beta:
+
+- Changed image naming scheme [ch-279](https://app.clubhouse.io/hyperqube/story/279)
+- Improved styling of modals [ch-274](https://app.clubhouse.io/hyperqube/story/274)
+- Improved modal button names [ch-271](https://app.clubhouse.io/hyperqube/story/271/v2-make-all-modal-button-labels-descriptive)
+- Added accordion for normal designs [ch-276](https://app.clubhouse.io/hyperqube/story/276)
+- Changed background color to match v1
+
 ## v1.1.10
 
 Released 2021-02-02
