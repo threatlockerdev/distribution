@@ -4,6 +4,16 @@ This changelog is for versions of our entire platform. Individual services in th
 
 We use [semver](https://semver.org/) for versioning.
 
+## v1.1.12
+
+Released 2021-02-16
+
+- Added "Manage Images" page [ch-282](https://app.clubhouse.io/hyperqube/story/282/implement-smooth-transition-between-v1-v2)
+
+The following changes only affect the v2 beta:
+
+- Added max height to all modals [ch-272](https://app.clubhouse.io/hyperqube/story/272)
+
 ## v1.1.11
 
 Released 2021-02-09
