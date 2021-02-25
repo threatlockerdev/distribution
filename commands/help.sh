@@ -14,4 +14,5 @@ Commands:
   generate-encryption-key    Generates a random v1 encryption key.
   generate-ssl-certificate   Generates a self-signed SSL certificate for the web server.
   db <v1 | v2>               Enters a PostgreSQL shell for the given database
+  minio                      Enters a shell with Minio client installed
   dev [args]                 Runs a docker-compose command against the dev configuration."
