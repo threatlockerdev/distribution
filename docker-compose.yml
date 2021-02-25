@@ -47,7 +47,7 @@ services:
     environment:
       APP_URL: ${APP_URL}
       DATABASE_URL: ${V1_DATABASE_URL}
-      DEBUG: "true"
+      DEBUG: ${V1_DEBUG}
       ENCRYPT_KEY: ${V1_ENCRYPTION_KEY}
       HQ_VERSION: ${HQ_VERSION}
       LICENSE_SERVICE_URL: https://license.${HQ_VERSION}.service.hyperqube.io
