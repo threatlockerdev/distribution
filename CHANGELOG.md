@@ -4,6 +4,15 @@ This changelog is for versions of our entire platform. Individual services in th
 
 We use [semver](https://semver.org/) for versioning.
 
+## v1.1.13
+
+Released 2021-03-04
+
+All changes in this release are for the v2 beta.
+
+- Implemented "About" page [ch-215](https://app.clubhouse.io/hyperqube/story/215)
+- Moved design property inputs to modals [ch-277](https://app.clubhouse.io/hyperqube/story/277)
+
 ## v1.1.12
 
 Released 2021-02-16
