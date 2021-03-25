@@ -8,17 +8,23 @@ We use [semver](https://semver.org/) for versioning.
 
 Released 2021-03-18
 
+- Added a favicon! [ch-319](https://app.clubhouse.io/hyperqube/story/319)
 - Implemented start order & delays for designs [ch-e55](https://app.clubhouse.io/hyperqube/epic/55/set-vm-start-order)
 - Added footer, including link to About page [ch-293](https://app.clubhouse.io/hyperqube/story/293/add-link-to-about)
 - Improved About page UI [ch-291](https://app.clubhouse.io/hyperqube/story/291/remove-dropdown-on-about)
 - Improved image creation [ch-294](https://app.clubhouse.io/hyperqube/story/294/image-table-doesn-t-refresh-after-create-delete), [ch-283](https://app.clubhouse.io/hyperqube/story/283/v2-improve-image-creation-ux)
+- Images are now uploaded to / deleted from vSphere [ch-98](https://app.clubhouse.io/hyperqube/story/98)
+- Improved "Manage Images" page UI [ch-273](https://app.clubhouse.io/hyperqube/story/273)
 
 The following changes only affect the v2 beta:
 
+- Added user settings page [ch-286](https://app.clubhouse.io/hyperqube/story/286)
 - Added checkout button to design list [ch-278](https://app.clubhouse.io/hyperqube/story/278/v2-add-checkout-button-to-design-list)
 - Replaced modal "cancel" buttons with close buttons [ch-275](https://app.clubhouse.io/hyperqube/story/275/v2-modals-should-have-close-buttons)
 - Fixed deleting deployed designs [ch-287](https://app.clubhouse.io/hyperqube/story/287/v2-implement-deployed-design-deletion)
 - Improved performance of power state fetching
+- Removed an extraneous error message from the "stop machine" button [ch-316](https://app.clubhouse.io/hyperqube/story/316)
+- Removed sidebar from design editor page [ch-314](https://app.clubhouse.io/hyperqube/story/314)
 
 ## v1.1.13
 
