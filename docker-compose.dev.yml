@@ -1,7 +1,16 @@
 version: "3.7"
 
 services:
+  s3:
+    restart: "no"
+  v1-db:
+    restart: "no"
+  v2-db:
+    restart: "no"
+  v1-redis:
+    restart: "no"
   v1-web:
+    restart: "no"
     command: pipenv run python3 manage.py runserver 0.0.0.0:8000
     environment:
       LICENSE_SERVICE_URL: https://license.beta.service.hyperqube.io
@@ -9,11 +18,13 @@ services:
       - ${DEV_V1_DIR}/hyperqube:/app/hyperqube
       - ${DEV_V1_DIR}/scripts:/app/scripts
   v1-worker:
+    restart: "no"
     command: python3 ./scripts/workers.py
     volumes:
       - ${DEV_V1_DIR}/hyperqube:/app/hyperqube
       - ${DEV_V1_DIR}/scripts:/app/scripts
   v2-api:
+    restart: "no"
     build:
       context: ${DEV_V2_API_DIR}
       dockerfile: ./docker/dev.Dockerfile
@@ -23,9 +34,11 @@ services:
       - ${DEV_V2_API_DIR}/yarn.lock:/yarn.lock
       - ${DEV_V2_API_DIR}/src:/src
   v2-web:
+    restart: "no"
     image: alpine:latest
     command: tail -f /dev/null
   nginx:
+    restart: "no"
     logging:
       driver: none
     volumes:
