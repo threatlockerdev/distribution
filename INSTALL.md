@@ -1,4 +1,4 @@
-# Installation Steps
+# Installation Procedure
 
 ## Prerequisites
 
@@ -28,3 +28,7 @@ If you're using a dev machine, you'll also need:
    - Run `./manage start`
 7. If you're setting up in a dev environment:
    - Run `./manage setup-dev`
+
+## Notes
+
+- To update the platform, see [UPDATE.md](./UPDATE.md).
