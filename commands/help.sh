@@ -9,10 +9,12 @@ Commands:
   restart [container]        Restarts all (or one) container(s).
   update                     Pull latest versions of all services.
   setup                      Creates initial user.
+  backup <dir>               Creates a backup of the databases in the given directory.
+  restore <dir>              Restores a backup of the databases from the given directory.
   reset                      Caution: resets all storage, including databases.
   run-migrations             Runs latest v1 database migrations.
   generate-encryption-key    Generates a random v1 encryption key.
   generate-ssl-certificate   Generates a self-signed SSL certificate for the web server.
-  db <v1 | v2>               Enters a PostgreSQL shell for the given database
-  minio                      Enters a shell with Minio client installed
+  db <v1 | v2>               Enters a PostgreSQL shell for the given database.
+  minio                      Enters a shell with Minio client installed.
   dev [args]                 Runs a docker-compose command against the dev configuration."
