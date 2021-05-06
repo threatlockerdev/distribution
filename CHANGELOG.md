@@ -4,6 +4,22 @@ This changelog is for versions of our entire platform. Individual services in th
 
 We use [semver](https://semver.org/) for versioning.
 
+## v1.1.16
+
+Released 2021-05-13
+
+- Pressing ENTER now submits modals instead of cancelling them! [ch-49](https://app.clubhouse.io/hyperqube/story/49)
+- Added new user management page for all admins to use [ch-e254](https://app.clubhouse.io/hyperqube/epic/254/v2-user-management), [ch-329](https://app.clubhouse.io/hyperqube/story/329), [ch-330](https://app.clubhouse.io/hyperqube/story/330)
+- Added VLAN range fields in tenancy configuration [ch-334](https://app.clubhouse.io/hyperqube/story/334)
+- Improved performance of some API endpoints [ch-363](https://app.clubhouse.io/hyperqube/story/363), [ch-346](https://app.clubhouse.io/hyperqube/story/346)
+
+The following changes only affect the v2 beta:
+
+- Added tenancy management page (WIP) [ch-168](https://app.clubhouse.io/hyperqube/story/168)
+- Added machine template management page (WIP) [ch-358](https://app.clubhouse.io/hyperqube/story/358)
+- Added design settings button to canvas [ch-315](https://app.clubhouse.io/hyperqube/story/315)
+- Added machine deletion button to canvas [ch-317](https://app.clubhouse.io/hyperqube/story/317)
+
 ## v1.1.15
 
 Released 2021-04-19
