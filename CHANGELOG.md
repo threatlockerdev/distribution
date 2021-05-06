@@ -4,9 +4,20 @@ This changelog is for versions of our entire platform. Individual services in th
 
 We use [semver](https://semver.org/) for versioning.
 
+## v1.1.15
+
+Released 2021-04-19
+
+- Improved start/stop design performance [ch-346](https://app.clubhouse.io/hyperqube/story/346)
+
+The following change only affects the v2 beta:
+
+- Added machine deletion endpoint to API [ch-318](https://app.clubhouse.io/hyperqube/story/318)
+- Added user management page [ch-328](https://app.clubhouse.io/hyperqube/story/328/implement-user-table), [ch-332](https://app.clubhouse.io/hyperqube/story/332/implement-user-creation), [ch-331](https://app.clubhouse.io/hyperqube/story/331/implement-user-admin-toggle)
+
 ## v1.1.14
 
-Released 2021-03-18
+Released 2021-04-15
 
 - Added a favicon! [ch-319](https://app.clubhouse.io/hyperqube/story/319)
 - Implemented start order & delays for designs [ch-e55](https://app.clubhouse.io/hyperqube/epic/55/set-vm-start-order)
