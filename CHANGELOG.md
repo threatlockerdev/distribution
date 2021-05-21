@@ -4,6 +4,22 @@ This changelog is for versions of our entire platform. Individual services in th
 
 We use [semver](https://semver.org/) for versioning.
 
+## v1.1.17
+
+Released 2021-05-21
+
+- Added new machine template management page for admins [ch-e255](https://app.clubhouse.io/hyperqube/epic/255/v2-machine-template-management)
+- Improved performance of VM network interface creation/deletion [ch-363](https://app.clubhouse.io/hyperqube/story/363)
+- Updated v2 API endpoints to use `DesignId` input type consistently
+- Improved user creation error messages
+- Fixed a refresh bug in user management page [ch-377](https://app.clubhouse.io/hyperqube/story/377)
+- Fixed a logout bug related to v2 pages [ch-375](https://app.clubhouse.io/hyperqube/story/375)
+- Fixed a visual bug when editing networks [ch-362](https://app.clubhouse.io/hyperqube/story/362)
+
+The following changes only affect the v2 beta:
+
+- Added VMware resource selection to tenancy management page [ch-345](https://app.clubhouse.io/hyperqube/story/345)
+
 ## v1.1.16
 
 Released 2021-05-13
