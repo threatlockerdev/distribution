@@ -33,6 +33,18 @@ services:
       - ${DEV_V2_API_DIR}/package.json:/package.json
       - ${DEV_V2_API_DIR}/yarn.lock:/yarn.lock
       - ${DEV_V2_API_DIR}/src:/src
+  v2-worker:
+    restart: "no"
+    build:
+      context: ${DEV_V2_API_DIR}
+      dockerfile: ./docker/dev.Dockerfile
+    image: "ghcr.io/hyperqube-io/v2-api:local"
+    environment:
+      HQ_MODE: worker
+    volumes:
+      - ${DEV_V2_API_DIR}/package.json:/package.json
+      - ${DEV_V2_API_DIR}/yarn.lock:/yarn.lock
+      - ${DEV_V2_API_DIR}/src:/src
   v2-web:
     restart: "no"
     image: alpine:latest
