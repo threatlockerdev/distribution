@@ -4,6 +4,21 @@ This changelog is for versions of our entire platform. Individual services in th
 
 We use [semver](https://semver.org/) for versioning.
 
+## v1.1.18
+
+Released 2021-06-10
+
+- Added new design management page for admins [ch-e256](https://app.clubhouse.io/hyperqube/epic/256)
+- Fixed several unexpected design permission checks [ch-378](https://app.clubhouse.io/hyperqube/story/378)
+
+The following changes only affect the v2 beta:
+
+- Added start-all button to canvas [ch-311](https://app.clubhouse.io/hyperqube/story/311)
+- Added delete button to canvas network nodes [ch-338](https://app.clubhouse.io/hyperqube/story/338)
+- Improved display of long design names [ch-403](https://app.clubhouse.io/hyperqube/story/403)
+- Added support for published designs in most design mutations [ch-401](https://app.clubhouse.io/hyperqube/story/401)
+- Added titles to all pages [ch-399](https://app.clubhouse.io/hyperqube/story/399)
+
 ## v1.1.17
 
 Released 2021-05-21
