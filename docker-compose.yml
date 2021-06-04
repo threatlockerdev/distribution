@@ -8,6 +8,7 @@ x-hq-common:
 
 x-hq-v1-env:
   &hq-v1-env
+  APP_URL: ${APP_URL}
   DATABASE_URL: ${V1_DATABASE_URL}
   DEBUG: ${V1_DEBUG}
   ENCRYPT_KEY: ${V1_ENCRYPTION_KEY}
