@@ -8,8 +8,8 @@ We use [semver](https://semver.org/) for versioning.
 
 Released 2021-06-10
 
-- Added new design management page for admins [ch-e256](https://app.clubhouse.io/hyperqube/epic/256)
-- Fixed several unexpected design permission checks [ch-378](https://app.clubhouse.io/hyperqube/story/378)
+- Fixed several unintended design permission checks [ch-378](https://app.clubhouse.io/hyperqube/story/378)
+- Fixed a UI bug in user management page [ch-405](https://app.clubhouse.io/hyperqube/story/405)
 
 The following changes only affect the v2 beta:
 
@@ -18,6 +18,7 @@ The following changes only affect the v2 beta:
 - Improved display of long design names [ch-403](https://app.clubhouse.io/hyperqube/story/403)
 - Added support for published designs in most design mutations [ch-401](https://app.clubhouse.io/hyperqube/story/401)
 - Added titles to all pages [ch-399](https://app.clubhouse.io/hyperqube/story/399)
+- Added VLAN range fields in tenancy configuration [ch-396](https://app.clubhouse.io/hyperqube/story/396)
 
 ## v1.1.17
 
