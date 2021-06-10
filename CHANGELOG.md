@@ -19,6 +19,8 @@ The following changes only affect the v2 beta:
 - Added support for published designs in most design mutations [ch-401](https://app.clubhouse.io/hyperqube/story/401)
 - Added titles to all pages [ch-399](https://app.clubhouse.io/hyperqube/story/399)
 - Added VLAN range fields in tenancy configuration [ch-396](https://app.clubhouse.io/hyperqube/story/396)
+- Current page is now highlighted in sidebar [ch-406](https://app.clubhouse.io/hyperqube/story/406)
+- Design card titles are now displayed correctly when longer than the card [ch-419](https://app.clubhouse.io/hyperqube/story/419)
 
 ## v1.1.17
 
