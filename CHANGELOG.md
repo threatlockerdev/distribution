@@ -4,6 +4,24 @@ This changelog is for versions of our entire platform. Individual services in th
 
 We use [semver](https://semver.org/) for versioning.
 
+## v1.1.18
+
+Released 2021-06-10
+
+- Fixed several unintended design permission checks [ch-378](https://app.clubhouse.io/hyperqube/story/378)
+- Fixed a UI bug in user management page [ch-405](https://app.clubhouse.io/hyperqube/story/405)
+
+The following changes only affect the v2 beta:
+
+- Added start-all button to canvas [ch-311](https://app.clubhouse.io/hyperqube/story/311)
+- Added delete button to canvas network nodes [ch-338](https://app.clubhouse.io/hyperqube/story/338)
+- Improved display of long design names [ch-403](https://app.clubhouse.io/hyperqube/story/403)
+- Added support for published designs in most design mutations [ch-401](https://app.clubhouse.io/hyperqube/story/401)
+- Added titles to all pages [ch-399](https://app.clubhouse.io/hyperqube/story/399)
+- Added VLAN range fields in tenancy configuration [ch-396](https://app.clubhouse.io/hyperqube/story/396)
+- Current page is now highlighted in sidebar [ch-406](https://app.clubhouse.io/hyperqube/story/406)
+- Design card titles are now displayed correctly when longer than the card [ch-419](https://app.clubhouse.io/hyperqube/story/419)
+
 ## v1.1.17
 
 Released 2021-05-21
