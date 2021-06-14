@@ -35,6 +35,7 @@ x-hq-v2-api-env:
   SENTRY_DSN: https://c42942d8618e4fc19c10842e39026bca@o467308.ingest.sentry.io/5499286
   V1_DATABASE_URL: ${V1_DATABASE_URL}
   V1_ENCRYPTION_KEY: ${V1_ENCRYPTION_KEY}
+  V1_REDIS_URL: redis://v1-redis
   V1_URL: http://v1-web:8000
 
 services:
