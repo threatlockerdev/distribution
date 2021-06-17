@@ -9,6 +9,8 @@ services:
     restart: "no"
   v1-redis:
     restart: "no"
+  v2-redis:
+    restart: "no"
   v1-web:
     restart: "no"
     command: pipenv run python3 manage.py runserver 0.0.0.0:8000
