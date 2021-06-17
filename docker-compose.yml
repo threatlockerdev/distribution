@@ -8,7 +8,7 @@ x-hq-common:
 
 x-hq-v1-env:
   &hq-v1-env
-  APP_URL: ${APP_URL}
+  APP_URL: ${APP_URL}/v1
   DATABASE_URL: ${V1_DATABASE_URL}
   DEBUG: ${V1_DEBUG}
   ENCRYPT_KEY: ${V1_ENCRYPTION_KEY}
@@ -20,7 +20,7 @@ x-hq-v1-env:
 
 x-hq-v2-api-env:
   &hq-v2-api-env
-  APP_URL: ${APP_URL}
+  APP_URL: ${APP_URL}/v1
   AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
   AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
   AWS_S3_ENDPOINT: ${AWS_S3_ENDPOINT}
@@ -82,9 +82,9 @@ services:
       - v1-redis
     environment:
       <<: *hq-v1-env
-      APP_URL: ${APP_URL}
+      APP_URL: ${APP_URL}/v1
       LICENSE_SERVICE_URL: https://license.${HQ_VERSION}.service.hyperqube.io
-      V2_URL: ${APP_URL}/v2
+      V2_URL: ${APP_URL}
   v1-worker:
     <<: *hq-common
     container_name: hq-v1-worker
@@ -123,10 +123,10 @@ services:
     container_name: hq-v2-web
     image: ghcr.io/hyperqube-io/v2-web:${HQ_VERSION}
     environment:
-      PUBLIC_URL: ${APP_URL}/v2/
-      REACT_APP_API_URL_V1: ${APP_URL}
+      PUBLIC_URL: ${APP_URL}/
+      REACT_APP_API_URL_V1: ${APP_URL}/v1
       REACT_APP_API_URL_V2: ${APP_URL}/v2/api
-      REACT_APP_BASE_URL: /v2/
+      REACT_APP_BASE_URL: /
       REACT_APP_HQ_VERSION: ${HQ_VERSION}
   nginx:
     <<: *hq-common
