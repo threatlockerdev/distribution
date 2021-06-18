@@ -4,6 +4,25 @@ This changelog is for versions of our entire platform. Individual services in th
 
 We use [semver](https://semver.org/) for versioning.
 
+## v2.0.0
+
+Released 2021-07-01
+
+- Redesigned/rewrote the entire frontend for usability and performance
+- Rewrote most of the backend to improve performance
+
+Changes since 1.1.18:
+
+- Added current username to navbar
+- Improved notifications for publishing/deploying designs [ch-306](https://app.clubhouse.io/hyperqube/story/306), [ch-395](https://app.clubhouse.io/hyperqube/story/395)
+- Improved machine template admin page's UI [ch-400](https://app.clubhouse.io/hyperqube/story/400)
+- Fixed loading design canvas with network interfaces
+- Fixed creating networks in v2 [ch-415](https://app.clubhouse.io/hyperqube/story/415)
+- Fixed several bugs in design canvas [ch-160](https://app.clubhouse.io/hyperqube/story/160)
+- Fixed deleting shared designs [ch-397](https://app.clubhouse.io/hyperqube/story/397)
+- Fixed resource usage page & improved its UI [ch-395](https://app.clubhouse.io/hyperqube/story/395)
+- Fixed design admin page not showing all designs
+
 ## v1.1.18
 
 Released 2021-06-10
