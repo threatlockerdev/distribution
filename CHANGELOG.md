@@ -14,8 +14,15 @@ Released 2021-07-01
 Changes since 1.1.18:
 
 - Added current username to navbar
+- Added "save as machine template" button [ch-431](https://app.clubhouse.io/hyperqube/story/431)
+- Improved performance of several VMware operations [ch-439](https://app.clubhouse.io/hyperqube/story/439)
 - Improved notifications for publishing/deploying designs [ch-306](https://app.clubhouse.io/hyperqube/story/306), [ch-395](https://app.clubhouse.io/hyperqube/story/395)
 - Improved machine template admin page's UI [ch-400](https://app.clubhouse.io/hyperqube/story/400)
+- Improved design canvas UI [ch-432](https://app.clubhouse.io/hyperqube/story/432), [ch-434](https://app.clubhouse.io/hyperqube/story/434)
+- Improved admin table UI [ch-421](https://app.clubhouse.io/hyperqube/story/421)
+- Improved and fixed VNC page [ch-433](https://app.clubhouse.io/hyperqube/story/433)
+- Fixed editing shared designs [ch-404](https://app.clubhouse.io/hyperqube/story/404)
+- Fixed unsharing designs [ch-442](https://app.clubhouse.io/hyperqube/story/442)
 - Fixed loading design canvas with network interfaces
 - Fixed creating networks in v2 [ch-415](https://app.clubhouse.io/hyperqube/story/415)
 - Fixed several bugs in design canvas [ch-160](https://app.clubhouse.io/hyperqube/story/160)
